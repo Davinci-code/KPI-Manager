@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_20227_kpi_manage_KPI_Manager.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<g2:evaluate var="jvar_stamp">
+		var gr = new GlideRecord('sys_ui_script');
+		gr.orderByDesc('sys_updated_on');
+		gr.query();
+		gr.next();
+		gr.getValue('sys_updated_on');
+	</g2:evaluate>
+
+
+	<g:requires name="x_20227_kpi_manage.angularjs-1.4.9.min.jsdbx"/> <!-- DONE -->
+	<g:requires name="x_20227_kpi_manage.kpi_manager.app.jsdbx" params="cache=$[jvar_stamp]" /> <!-- DONE -->
+	<g:requires name="x_20227_kpi_manage.kpi_manager_model.jsdbx" params="cache=$[jvar_stamp]" /> <!-- DONE-->
+	<g:requires name="x_20227_kpi_manage.kpi_manager_ctrl.jsdbx" params="cache=$[jvar_stamp]" /> <!-- DONE -->
+	<g:requires name="x_20227_kpi_manage.kpi.chart.jsdbx" params="cache=$[jvar_stamp]" /> <!-- DONE -->
+	<g:requires name="x_20227_kpi_manage.doughnut_chart.jsdbx" params="cache=$[jvar_stamp]" /><!-- DONE -->
+	<g:requires name="x_20227_kpi_manage.template_service.jsdbx" params="cache=$[jvar_stamp]" /> <!-- DONE -->
+	<g:requires name="x_20227_kpi_manage.kpi_breach_model.jsdbx" params="cache=$[jvar_stamp]" />
+	<g:requires name="x_20227_kpi_manage.kpi_manager_active_br.jsdbx" params="cache=$[jvar_stamp]" />
+	
+	
+	<div ng-app="kpi_manager.app">
+		<div ng-controller="KpiManagerCtrl">
+			
+			<!-- The container and include for the navigation bar, which contains the header and search input -->
+			<nav ng-include="getTemplate('x_20227_kpi_manage_kpi_navigation_bar')" class="navbar navbar-default"/>
+
+			<!-- The list breadcrumb, containing text the current search term or 'All Incidents' if no search term exists -->
+			<!--<div ng-include="getTemplate('sn_k16_im_breadcrumbs')" class="row"/>-->
+
+			<!-- The Incident list, displaying specific Incident information and dashboard, display Incident counts -->
+			<div class="row">
+				<div class="col-md-12">
+					<!--<div ng-include="getTemplate('x_20227_kpi_manage_kpi_manager_pie')" class="col-md-4"/>-->
+					<div ng-include="getTemplate('x_20227_kpi_manage_kpi_list')" class="col-md-4"/>
+					<div ng-include="getTemplate('x_20227_kpi_manage_kpi_dashboard_active_breach')" class="col-md-4"/>
+					<div ng-include="getTemplate('x_20227_kpi_manage_kpi_dashboard_breach')" class="col-md-4"/>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</j:jelly>]]></html>
+        <name>KPI_Manager</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-05-25 14:30:34</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>5fbc5d66db2312009c99fbefbf96198d</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>KPI_Manager</sys_name>
+        <sys_package display_value="KPI Management" source="x_20227_kpi_manage">a1a611a2db2312009c99fbefbf961906</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="KPI Management">a1a611a2db2312009c99fbefbf961906</sys_scope>
+        <sys_update_name>sys_ui_page_5fbc5d66db2312009c99fbefbf96198d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-06-01 00:05:19</sys_updated_on>
+    </sys_ui_page>
+</record_update>

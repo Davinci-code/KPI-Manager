@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="KPI Management">16ef6e5fdbc36200d3e1fbefbf961917</application>
+        <filter/>
+        <name>KPI s</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_20227_kpi_manage.user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-11-18 04:08:43</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>12ef2213db076200d3e1fbefbf961951</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KPI s</sys_name>
+        <sys_package display_value="KPI Management" source="x_20227_kpi_manage">a1a611a2db2312009c99fbefbf961906</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="KPI Management">a1a611a2db2312009c99fbefbf961906</sys_scope>
+        <sys_update_name>sys_ui_module_12ef2213db076200d3e1fbefbf961951</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-11-18 04:08:43</sys_updated_on>
+        <table>x_20227_kpi_manage_kpi</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

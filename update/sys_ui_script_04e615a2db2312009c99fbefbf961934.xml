@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_20227_kpi_manage.kpi_manager_ctrl</name>
+        <script><![CDATA[angular.module('kpi_manager.app').controller('KpiManagerCtrl', ['$scope', 'KpiManagerModel', 
+	'TemplateService','KpiBreachModel', 'KpiActiveBreachModel', function($scope, KpiManagerModel, TemplateService,KpiBreachModel, KpiActiveBreachModel) {
+	
+	"use strict";
+	
+	$scope.model = KpiManagerModel.initialize();
+	
+	//$scope.modelBreach = KpiBreachModel.initialize();
+		
+	//$scope.modelActiveBreach = KpiActiveBreachModel.initialize();
+		
+	$scope.getTemplate = function(name) {
+		return TemplateService.getTemplate(name);
+	};
+
+	$scope.openIncident = function(sysId) {
+		var modal = new GlideModalForm('KPI Manager', 'incident');
+		modal.addParm('sysparm_view', 'KPI Manager');
+		modal.setSysID(sysId);
+		modal.render();
+	};
+
+	/*$scope.$watch('model.searchValue', function(newValue, oldValue) {
+		if (newValue !== oldValue)
+			$scope.model.getListData();
+	}); */
+}]);
+
+
+]]></script>
+        <script_name>kpi_manager_ctrl</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-05-25 14:06:15</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>04e615a2db2312009c99fbefbf961934</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>x_20227_kpi_manage.kpi_manager_ctrl</sys_name>
+        <sys_package display_value="KPI Management" source="x_20227_kpi_manage">a1a611a2db2312009c99fbefbf961906</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="KPI Management">a1a611a2db2312009c99fbefbf961906</sys_scope>
+        <sys_update_name>sys_ui_script_04e615a2db2312009c99fbefbf961934</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-11-15 20:03:07</sys_updated_on>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>
